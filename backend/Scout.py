@@ -11,8 +11,8 @@ class Scout:
 
     CYCLE_TIME = 600 #seconds
     START_RANK = 300
-    MAX_MARKET_CAP = 5000000
-    TWEETS_IN_A_WEEK = 1 #how many tweets a week is considered active
+    MAX_MARKET_CAP = 1000000
+    TWEETS_IN_A_WEEK = 2 #how many tweets a week is considered active
     API_ENDPOINT = 'https://api.coinmarketcap.com/v1/ticker/?start='+str(START_RANK)+'&limit=100000'
     COIN_PAGE_URL = 'https://coinmarketcap.com/currencies/'
 
@@ -128,6 +128,9 @@ class Scout:
             scouted_coins_file.close()
 
     def plus_prepended(self, str):
+        if str is None:
+            return 'N/A'
+        
         return '' if str is None else \
                 str if "-" in str else "+" + str
 
