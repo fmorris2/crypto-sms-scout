@@ -29,6 +29,7 @@ Criteria should be expanded so that the system is more intelligent. Market cap &
    - ```
      Twilio Account SID
      Twilio Auth Token
+     Twilio phone # to send messages from
      ```
 3. Create a file named keys in the data/ directory. This file will hold keys to access the [Twitter API](https://developer.twitter.com/en/docs/basics/authentication/overview/application-only). The file should be in this format:
    - ```
